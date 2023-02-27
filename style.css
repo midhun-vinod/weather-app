@@ -1,0 +1,57 @@
+.weather{
+
+    width: 100%;
+    height:100hv;
+    
+
+}
+body{
+
+    background-image: url('./hd-wallpaper-3625405.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+#search{
+
+    width: 40%;
+}
+#row{
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    color: white;
+    font-size: 25px;
+    font-weight:900;
+}
+span{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(9, 241, 171);
+    
+}
+h1{
+    font-family: 'Archivo', sans-serif;
+}
+@media(max-width: 600px) {
+    #search {
+      width: 80%;
+    }
+}
+@media(max-width: 800px) {
+    #search {
+      width: 80%;
+    }
+}
+.search-bar{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Archivo',sans-serif;
+    border: none;
+    border-radius: 10px;
+}
+input{
+    font-family: 'Archivo',sans-serif;
+}
