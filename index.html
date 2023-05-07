@@ -14,10 +14,10 @@
 </head>
 <body>
     <div class="container text-center">
-        <h1 class="mt-5 text center" style="color: rgb(9, 241, 171);font-weight: bolder;">Weather App</h1>
+        <h1 class="mt-5 text center" style="color: rgb(237, 145, 26);font-weight: bolder;font-size: 3rem;">Weather App</h1>
         <center><input id="search"class="search-bar mt-5"type="text" placeholder="Enter your city...."></center>
-        <input id="city"class="btn btn-success mt-2"type="button" value="Search"onclick="weatherapiCall()">
-        <div id="result"class="weather p-5">
+        <input id="city"class="search-button"type="button" value="Search"onclick="weatherapiCall()">
+        <div id="result"class="weather p-2">
 
             <!-- <div id="row"class="c1 mt-2"><span>City: </span></div>
             <div id="row"class="c2 mt-2"><span>Temperature: </span></div>
@@ -61,14 +61,16 @@
     htmlData=``
 
         htmlData=`
-            <center>
-                <div id="row"class="c1 mt-2"><span>City: </span>${allData.name}, ${allData.sys.country}</div>
-                <div id="row"class="c2 mt-2"><span>Temperature: </span>${Math.floor(allData.main.temp-273.15)}&deg C</div>
-                <div id="row"class="c3 mt-2"><span>Humidity: </span>${allData.main.humidity}%</div>
-                <div id="row"class="c4 mt-2"><span>Wind: </span>${allData.wind.speed} m/s</div>
-                <div id="row"class="c5 mt-2"><span>Pressure: </span>${allData.main.pressure}hpa</div>
-                <div id="row"class="c6 mt-2"><span>Cloudy: </span>${allData.clouds.all}%</div>
-            </center>`
+            <div class="content">
+                <div class="details pt-4 ps-4">
+                    <div id="row"class="c1 mt-2"><span>City: </span>${allData.name}, ${allData.sys.country}</div>
+                    <div id="row"class="c2 mt-2"><span>Temperature: </span>${Math.floor(allData.main.temp-273.15)}&deg C</div>
+                    <div id="row"class="c3 mt-2"><span>Humidity: </span>${allData.main.humidity}%</div>
+                    <div id="row"class="c4 mt-2"><span>Wind: </span>${allData.wind.speed} m/s</div>
+                    <div id="row"class="c5 mt-2"><span>Pressure: </span>${allData.main.pressure}hpa</div>
+                    <div id="row"class="c6 mt-2"><span>Cloudy: </span>${allData.clouds.all}%</div>
+                </div>
+            </div>`
     
     result.innerHTML = htmlData
         
